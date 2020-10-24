@@ -21,6 +21,31 @@ function start() {
 window.start();
 
 /*--------------------------------------------- 
+    scroll will change the header
+----------------------------------------------*/
+
+var scrollable = false;
+window.onscroll = function() {
+    var aTag = document.querySelectorAll('.header a');
+    if (window.scrollY != 0 && scrollable == false) {
+        scrollable = true;
+        document.querySelector('.header').style.backgroundColor = 'white';
+        document.querySelector('.header .logo img').src = 'imgs/logo1.png';
+        for (let i = 0; i < aTag.length; i++) {
+            aTag[i].style.color = '#16276d';
+        }
+    } else if (window.scrollY == 0) {
+        scrollable = false;
+        document.querySelector('.header').style.backgroundColor = 'transparent';
+        document.querySelector('.header .logo img').src = 'imgs/logo.png';
+        for (let i = 0; i < aTag.length; i++) {
+            aTag[i].style.color = 'white';
+        }
+    }
+}
+
+
+/*--------------------------------------------- 
    change the content of the banner
 ----------------------------------------------*/
 

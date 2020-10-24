@@ -33,12 +33,12 @@ a {
     position: fixed;
     top: 0px;
     width: 100%;
-    height: 100px;
+    height: 90px;
     padding: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
     ul {
         display: inline-block;
         li {
@@ -65,9 +65,9 @@ a {
         display: none;
         >* {
             position: absolute;
-            top: 150px;
+            top: 90px;
             width: 40%;
-            height: calc(100% - 150px);
+            height: calc(100% - 90px);
         }
         .banner-text {
             left: 10%;
@@ -142,5 +142,261 @@ a {
     }
     .banner-content.active {
         display: block;
+    }
+}
+
+
+/*--------------------------------------------- 
+                    ABOUT-US
+----------------------------------------------*/
+
+.about-us {
+    padding: 100px 10%;
+    height: 200vh;
+    .row-1 {
+        height: 100vh;
+        h2 {
+            text-transform: uppercase;
+            color: #16276d;
+            font-family: 'Arsenal', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 2.5rem;
+            &::after {
+                content: '';
+                display: block;
+                width: 300px;
+                height: 3px;
+                margin-top: 5px;
+                margin-left: 2px;
+                border-radius: 1.5px;
+                background: linear-gradient(45deg, #639ae6 25%, #c635e2 25%, #639ae6 50%, #c635e2 50%, #639ae6 75%, #c635e2 75%);
+            }
+        }
+        >div {
+            height: 85%;
+            display: flex;
+            justify-content: space-between;
+            .r1-col1 {
+                display: inline-block;
+                width: 50%;
+                >div {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 450px;
+                    height: 150px;
+                    padding-left: 20px;
+                    margin-bottom: 40px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.1);
+                    div {
+                        display: inline-block;
+                        h3 {
+                            font-size: 18px;
+                            color: #16276d;
+                            margin-bottom: 20px;
+                            fon-weight: normal;
+                        }
+                        p {
+                            color: #6d6d6d;
+                            font-size: 16px;
+                            font-family: 'Roboto', sans-serif
+                        }
+                        &:last-child {
+                            margin-left: 20px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        margin-left: 150px;
+                    }
+                }
+            }
+            .r1-col2 {
+                position: relative;
+                display: inline-block;
+                width: 50%;
+                img {
+                    position: absolute;
+                    border: 3px solid white;
+                    border-radius: 20%;
+                    box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.1);
+                    transition: 0.5s;
+                    &:first-child {
+                        top: 25%;
+                        left: 5%;
+                        max-width: 30%;
+                        max-height: 30%;
+                        z-index: 20;
+                    }
+                    &:nth-child(2) {
+                        top: 40%;
+                        left: 25%;
+                        max-width: 50%;
+                        max-height: 50%;
+                        z-index: 15;
+                    }
+                    &:last-child {
+                        top: 5%;
+                        left: 45%;
+                        max-width: 50%;
+                        max-height: 50%;
+                        z-index: 10;
+                    }
+                    &:hover {
+                        transform: scale(1.2);
+                        z-index: 25;
+                        box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
+    }
+    .row-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #f3f7f9;
+        .r2-col1 {
+            flex-basis: 50%;
+        }
+        .r2-col2 {
+            flex-basis: 40%;
+            height: 100%;
+            background-color: white;
+            padding: 50px 10px;
+            >* {
+                margin-bottom: 30px;
+                margin-left: 50px;
+                margin-right: 30px;
+            }
+            h2 {
+                color: #16276d;
+                font-size: 19px;
+                font-family: 'Arsenal', sans-serif;
+                text-transform: uppercase;
+                font-weight: bold;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 150px;
+                    height: 3px;
+                    margin-top: 5px;
+                    margin-left: 2px;
+                    border-radius: 1.5px;
+                    background: linear-gradient(45deg, #639ae6 25%, #c635e2 25%, #639ae6 50%, #c635e2 50%, #639ae6 75%, #c635e2 75%);
+                }
+            }
+            h3 {
+                font-size: 18px;
+                font-family: 'Roboto', sans-serif;
+            }
+            p {
+                font-size: 17px;
+                color: #575757;
+                line-height: 30px;
+            }
+            button {
+                cursor: pointer;
+                color: white;
+                font-family: 'Open Sans';
+                font-weight: 300;
+                font-size: 15px;
+                width: 140px;
+                height: 40px;
+                border-radius: 15px;
+                background: linear-gradient(to right, #3c138f, #96368e);
+                border: none;
+                transition: 0.4s;
+                &:hover {
+                    transform: scale(1.2);
+                    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}
+
+.news {
+    display: flex;
+    height: 80vh;
+    padding: 0 10%;
+    .news-text {
+        flex-basis: 30%;
+        margin-top: 100px;
+        h2 {
+            color: #16276d;
+            text-transform: uppercase;
+            font-family: 'Arsenal', sans-serif;
+            font-weight: 700;
+            margin-bottom: 30px;
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 3px;
+                margin-top: 5px;
+                margin-left: 2px;
+                border-radius: 1.5px;
+                background: linear-gradient(45deg, #639ae6 25%, #c635e2 25%, #639ae6 50%, #c635e2 50%, #639ae6 75%, #c635e2 75%);
+            }
+        }
+        p {
+            color: #575757;
+            line-height: 25px;
+        }
+    }
+    .news-img {
+        position: relative;
+        flex-basis: 70%;
+        div {
+            position: absolute;
+            display: inline-block;
+            width: 40%;
+            height: 40%;
+            margin: 20px;
+            border-radius: 20px;
+            background-color: red;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: 1.5s;
+            &:nth-child(1) {
+                top: 10%;
+                left: 0;
+                background-image: url('imgs/news-1.png')
+            }
+            &:nth-child(2) {
+                top: 55%;
+                left: 0;
+                background-image: url('imgs/news-2.png')
+            }
+            &:nth-child(3) {
+                top: 0;
+                left: 45%;
+                background-image: url('imgs/news-3.png')
+            }
+            &:nth-child(4) {
+                top: 45%;
+                left: 45%;
+                background-image: url('imgs/news-4.png')
+            }
+            &:hover {
+                transform-style: preserve-3d;
+            }
+            &:first-child:hover {
+                transform: rotateY(180deg);
+            }
+            &:nth-child(2):hover {
+                transform: rotateX(180deg);
+            }
+            &:nth-child(3):hover {
+                transform: rotateX(-180deg);
+            }
+            &:nth-child(4):hover {
+                transform: rotateY(-180deg);
+            }
+        }
     }
 }
