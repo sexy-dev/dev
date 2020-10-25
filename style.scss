@@ -24,6 +24,42 @@ a {
     text-decoration: none;
 }
 
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
 
 /*--------------------------------------------- 
                     HEADER
@@ -191,8 +227,15 @@ a {
                     background-color: #fff;
                     border-radius: 10px;
                     box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.1);
+                    transition: 0.5s;
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.5);
+                    }
                     div {
                         display: inline-block;
+                        // height: 100%;
                         h3 {
                             font-size: 18px;
                             color: #16276d;
@@ -205,7 +248,8 @@ a {
                             font-family: 'Roboto', sans-serif
                         }
                         &:last-child {
-                            margin-left: 20px;
+                            overflow: hidden;
+                            margin: 0 20px;
                         }
                     }
                     &:nth-child(2) {
@@ -260,6 +304,10 @@ a {
         background-color: #f3f7f9;
         .r2-col1 {
             flex-basis: 50%;
+            &:hover {
+                animation: shake 0.6s;
+                animation-iteration-count: initial;
+            }
         }
         .r2-col2 {
             flex-basis: 40%;
