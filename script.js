@@ -1,3 +1,6 @@
+/* ----- command ------ */
+// git commit --allow-empty -m "Empty commit"
+console.log('git commit --allow-empty -m "Empty commit"');
 /*--------------------------------------------- 
    this function works when open website 
 ----------------------------------------------*/
