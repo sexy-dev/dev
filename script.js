@@ -5,8 +5,8 @@ console.log('git commit --allow-empty -m "Empty commit"');
    this function works when open website 
 ----------------------------------------------*/
 function doSomethingWrong() {
-    document.querySelector('.banner-text h2:first-child').style.textIndent = '-1000px';
-    document.querySelector('.banner-text h2:last-child').style.textIndent = '-1000px';
+    document.querySelector('.banner-text h2:first-child').style.textIndent = '-3000px';
+    document.querySelector('.banner-text h2:last-child').style.textIndent = '-3000px';
     document.querySelector('.banner-text > div:nth-child(2)').style.left = '60%';
     // document.querySelector('.banner-text > div:nth-child(2)').style.textIndent = '1000px';
     document.querySelector('.banner-img img').style.top = '150%';
@@ -107,5 +107,5 @@ function changeBanner() {
         document.querySelector('.banner-text > div:nth-child(2)').style.textIndent = '0px';
         document.querySelector('.banner-img img').style.top = '15%';
         document.querySelector('.banner-img').style.left = '50%';
-    }, 800);
+    }, 500);
 }
