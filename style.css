@@ -427,6 +427,8 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #f3f7f9;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .about-us .row-2 .r2-col1 {
@@ -434,11 +436,10 @@ a {
       flex-basis: 50%;
 }
 
-.about-us .row-2 .r2-col1:hover {
-  -webkit-animation: shake 0.6s;
-          animation: shake 0.6s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
+.about-us .row-2 .r2-col1 img {
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .about-us .row-2 .r2-col2 {
@@ -447,6 +448,8 @@ a {
   height: 100%;
   background-color: white;
   padding: 50px 10px;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-us .row-2 .r2-col2 > * {
@@ -563,6 +566,8 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
   -webkit-transition: 1.5s;
   transition: 1.5s;
 }
@@ -669,6 +674,8 @@ a {
 
 .customers .cus-content > div div img {
   border-radius: 50%;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .customers .cus-content > div span {
@@ -695,6 +702,11 @@ a {
 
 .customers .cus-content > div:hover div {
   background: #79c8fd;
+}
+
+.customers .cus-content > div:hover div img {
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0);
 }
 
 .customers .cus-content > div:hover p {
