@@ -72,12 +72,12 @@ h4 {
         height: 100%;
     }
     .banner-content {
+        position: relative;     
         display: flex;
         width: 100%;
         height: 100%;
         padding: 100px 10% 0 10%;
         .banner-text {
-            position: relative;
             flex-basis: 50%;
             padding: 10% 0 5% 0;
             .banner__text-title {

@@ -2,6 +2,13 @@
 
 new WOW().init();
 
+/*--------------------------------------------- 
+    header-menu
+----------------------------------------------*/
+
+document.getElementById('header__menu').addEventListener('click', function() {
+    alert('..');
+})
 
 /*--------------------------------------------- 
     scroll will change the header
@@ -38,6 +45,7 @@ var el = document.querySelectorAll('.banner-text ul li');
 var curIndex = 0;
 for (let e = 0; e < el.length; e++) { // add event to each element (li tag)
     el[e].addEventListener('click', () => {
+        console.log("?")
         el[curIndex].classList.toggle('selected');
         el[e].classList.toggle('selected');
         curIndex = e;
