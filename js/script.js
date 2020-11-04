@@ -1,30 +1,7 @@
-/* ----- command ------ */
-// git commit --allow-empty -m "Empty commit"
-console.log('git commit --allow-empty -m "Empty commit"');
+
 
 new WOW().init();
 
-/*--------------------------------------------- 
-   this function works when open website 
-----------------------------------------------*/
-function doSomethingWrong() {
-    document.querySelector('.banner-text h2:first-child').style.textIndent = '-3000px';
-    document.querySelector('.banner-text h2:last-child').style.textIndent = '-3000px';
-    document.querySelector('.banner-text > div:nth-child(2)').style.left = '60%';
-    // document.querySelector('.banner-text > div:nth-child(2)').style.textIndent = '1000px';
-    document.querySelector('.banner-img img').style.top = '150%';
-    document.querySelector('.banner-img').style.left = '70%';
-}
-
-function start() {
-    document.querySelector('.banner-text h2:first-child').style.textIndent = '0px';
-    document.querySelector('.banner-text h2:last-child').style.textIndent = '0px';
-    document.querySelector('.banner-text > div:nth-child(2)').style.left = '0';
-    document.querySelector('.banner-text > div:nth-child(2)').style.textIndent = '0px';
-    document.querySelector('.banner-img img').style.top = '15%';
-    document.querySelector('.banner-img').style.left = '50%';
-}
-window.start();
 
 /*--------------------------------------------- 
     scroll will change the header
@@ -40,6 +17,7 @@ window.onscroll = function() {
         for (let i = 0; i < aTag.length; i++) {
             aTag[i].style.color = '#16276d';
         }
+        document.querySelector('.header i').style.color = 'black';
     } else if (window.scrollY == 0) {
         scrollable = false;
         document.querySelector('.header').style.backgroundColor = 'transparent';
@@ -47,6 +25,7 @@ window.onscroll = function() {
         for (let i = 0; i < aTag.length; i++) {
             aTag[i].style.color = 'white';
         }
+        document.querySelector('.header i').style.color = 'white';
     }
 }
 
@@ -65,6 +44,8 @@ for (let e = 0; e < el.length; e++) { // add event to each element (li tag)
         changeBanner();
     })
 }
+
+// contents of the banner
 var db = [{
         h2_1: 'Doanh nghiệp',
         h2_2: 'Phần mềm quản lý',
@@ -102,13 +83,4 @@ function changeBanner() {
     document.querySelector('.banner-text p').innerHTML = db[curIndex].p;
     document.querySelector('.banner-img img').src = db[curIndex].img;
     document.querySelector('.banner-img').style.backgroundImage = "url(" + db[curIndex].bg + ")";
-    doSomethingWrong();
-    setTimeout(function() {
-        document.querySelector('.banner-text h2:first-child').style.textIndent = '0px';
-        document.querySelector('.banner-text h2:last-child').style.textIndent = '0px';
-        document.querySelector('.banner-text > div:nth-child(2)').style.left = '0';
-        document.querySelector('.banner-text > div:nth-child(2)').style.textIndent = '0px';
-        document.querySelector('.banner-img img').style.top = '15%';
-        document.querySelector('.banner-img').style.left = '50%';
-    }, 500);
 }
