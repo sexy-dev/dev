@@ -50,6 +50,7 @@ window.onscroll = function () {
             aTag[i].style.color = '#16276d';
         }
         document.querySelector('.header i').style.color = 'black';
+        document.querySelector('.header').style.borderBottomColor = '#ebebeb';
     } else if (window.scrollY == 0) {
         scrollable = false;
         document.querySelector('.header').style.backgroundColor = 'transparent';
@@ -58,6 +59,8 @@ window.onscroll = function () {
             aTag[i].style.color = 'white';
         }
         document.querySelector('.header i').style.color = 'white';
+        document.querySelector('.header').style.borderBottomColor = 'transparent';
+
     }
 }
 

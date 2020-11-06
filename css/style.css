@@ -87,6 +87,7 @@ button:focus {
   width: 100%;
   height: 90px;
   padding: 0 10%;
+  border-bottom: 1px solid transparent;
   z-index: 100;
 }
 
@@ -124,7 +125,6 @@ button:focus {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
 }
 
 #mask.hide {
@@ -294,11 +294,6 @@ button:focus {
 ----------------------------------------------*/
 .about-us {
   padding: 100px 10%;
-  height: 200vh;
-}
-
-.about-us .row-1 {
-  height: 100vh;
 }
 
 .about-us .row-1 h2 {
@@ -857,7 +852,7 @@ footer .footer-row2 a {
 /* --------mobile & tablet-------- */
 @media screen and (max-width: 1023px) {
   .header {
-    padding-top: 0px;
+    padding: 0 5% 0 5%;
   }
   .header .logo img {
     min-width: 80%;
@@ -895,13 +890,13 @@ footer .footer-row2 a {
     font-size: 14px;
   }
   .banner .banner-content .banner-text .banner__text-menu {
-    margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 130px;
-    padding: 5px 0;
+    margin: 0 auto;
+    height: auto;
+    padding: 10px 0;
   }
   .banner .banner-content .banner-text .banner__text-menu li {
     width: 180px;
@@ -909,10 +904,19 @@ footer .footer-row2 a {
   .banner .banner-content .banner-img {
     display: none;
   }
+  .about-us .row-1 .r1-col1 > div {
+    margin-bottom: 20px !important;
+  }
+  .about-us .row-2 {
+    padding: 30px 15px !important;
+  }
+  .about-us .row-2 .r2-col1 {
+    margin-bottom: 20px !important;
+  }
 }
 
 /*  --------mobile-------- */
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 768px) {
   .about-us {
     padding: 20px 5%;
   }
@@ -1026,6 +1030,112 @@ footer .footer-row2 a {
   }
   footer .footer-row2 a {
     margin-left: 0;
+  }
+}
+
+/* ----------------- TABLET ----------------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    height: 80vh !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  body > * {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+  .header ul.header-links {
+    display: block;
+  }
+  .header ul.header-links li {
+    margin-left: 15px;
+  }
+  .header #header__menu {
+    display: none;
+  }
+  .banner {
+    height: 55vh !important;
+  }
+  .banner .banner-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .banner .banner-content .banner-text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .banner .banner-content .banner-text .banner__text-des {
+    margin-top: 50px;
+  }
+  .banner .banner-content .banner-text .banner__text-menu {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .banner .banner-content .banner-img {
+    display: none;
+  }
+  .about-us .row-1 .r1-col2 img:nth-child(1) {
+    top: 0 !important;
+    left: 5% !important;
+  }
+  .about-us .row-1 .r1-col2 img:nth-child(2) {
+    top: 25% !important;
+    left: 45% !important;
+    max-width: 40% !important;
+    max-height: 40% !important;
+  }
+  .about-us .row-1 .r1-col2 img:nth-child(3) {
+    top: 65% !important;
+    left: 5% !important;
+    max-width: 35% !important;
+    max-height: 35% !important;
+  }
+  .about-us .row-2 .r2-col1 {
+    -ms-flex-preferred-size: 50% !important;
+        flex-basis: 50% !important;
+  }
+  .about-us .row-2 .r2-col1 img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+  .about-us .row-2 .r2-col2 {
+    border-radius: 10px;
+  }
+  .about-us .row-2 .r2-col2 button {
+    display: block;
+    margin: 0 auto;
+  }
+  .news {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto !important;
+    padding-bottom: 30px !important;
+  }
+  .news .news-img div {
+    width: 30% !important;
+  }
+  .news .news-img div:nth-child(1) {
+    left: 5% !important;
+  }
+  .news .news-img div:nth-child(2) {
+    left: 15% !important;
+  }
+  .news .news-img div:nth-child(3) {
+    left: 55% !important;
+  }
+  .news .news-img div:nth-child(4) {
+    left: 55% !important;
+  }
+  .customers {
+    height: 45vh !important;
+  }
+  footer .footer-row1 {
+    padding: 30px 5% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
