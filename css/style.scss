@@ -1023,8 +1023,9 @@ footer {
 @media screen and (max-width: 320px) {
     .banner {
         .banner-text{
-            .banner__text-des {
-                margin-bottom: 45px;
+            .banner__text-title {
+                height: 15% !important;
+               padding-top: 20px !important;
             }
         }
     }
