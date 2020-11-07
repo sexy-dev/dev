@@ -36,6 +36,9 @@ button:focus {
   outline: none;
 }
 
+/*--------------------------------------------- 
+                PRELOAD
+----------------------------------------------*/
 #progress {
   position: absolute;
   top: 0;
@@ -52,7 +55,9 @@ button:focus {
           align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #252525;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 #progress .r {
@@ -66,24 +71,26 @@ button:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 500px;
   height: 500px;
   padding: 10px 20px;
-  margin: 100px auto;
+  margin: 0px auto;
 }
 
-#progress .r span {
-  display: block;
-  color: red;
-  text-transform: uppercase;
-  font-size: 30px;
+#progress .r .progress__loading {
+  width: 100%;
+  text-align: center;
   margin-bottom: 5px;
 }
 
+#progress .r .progress__loading span {
+  color: red;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
 #progress .r .progress__percent {
+  text-align: center;
   margin-bottom: 5px;
 }
 
@@ -98,6 +105,21 @@ button:focus {
   height: 5px;
   border-radius: 2.5px;
   background-color: red;
+}
+
+#progress .r .progress__person {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#progress .r .progress__person span {
+  display: block;
+  width: 100%;
+}
+
+#progress .r .progress__person span i {
+  font-size: 250px;
+  color: white;
 }
 
 /*--------------------------------------------- 
@@ -948,6 +970,9 @@ footer .footer-row2 a {
 
 /*  --------mobile-------- */
 @media screen and (max-width: 768px) {
+  #progress .progress__person span i {
+    font-size: 80px !important;
+  }
   .about-us {
     padding: 20px 5%;
   }

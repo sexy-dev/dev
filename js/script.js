@@ -11,22 +11,27 @@ var prg = document.getElementById('progress');
 var percent = document.querySelector('#progress .progress__percent span');
 var pgb = document.querySelector('#progress .progress__bar');
 var intervalId = null;
+var Running = document.querySelector('#progress .progress__person span');
+var widthOfRunning = document.querySelector('#progress .progress__person span i').offsetWidth - 10;
+Running.style.marginLeft = -widthOfRunning + "px";
 
 var pg = function () {
     if (w <= 100) {
         percent.innerHTML = w + "%";
-        pgb.style.width = w++ + '%';
+        pgb.style.width = w + '%';
+        var x = (-widthOfRunning + ++w / 100 * Running.offsetWidth) + "px";
+        Running.style.marginLeft = x;
     } else {
         clearInterval(intervalId);
     }
 }
-setInterval(pg, 20);
+setInterval(pg, 30);
 setTimeout(function () {
     prg.style.display = 'none';
     document.querySelector('.banner .banner__text-title').classList.add('bounceInLeft');
     document.querySelector('.banner .banner__text-des').classList.add('bounceInRight');
     document.querySelector('.banner .banner-img img').classList.add('bounceInUp');
-}, 2500);
+}, 3100);
 
 
 
@@ -125,9 +130,10 @@ var db = [{
 ]
 
 function changeBanner() {
-    document.querySelector('.banner-text h2:first-child').innerHTML = db[curIndex].h2_1;
+    document.querySelector('.banner-text h2:first-child').innerHTML = db[curIndex].h2_1;    
     document.querySelector('.banner-text h2:last-child').innerHTML = db[curIndex].h2_2;
     document.querySelector('.banner-text p').innerHTML = db[curIndex].p;
     document.querySelector('.banner-img img').src = db[curIndex].img;
     document.querySelector('.banner-img').style.backgroundImage = "url(" + db[curIndex].bg + ")";
+
 }
