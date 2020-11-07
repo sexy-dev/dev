@@ -1,22 +1,33 @@
 /* wow js */
 new WOW().init();
 
-// var w = 1;
-// var percent = document.querySelector('#test .test__progress-percent');
-// var intervalId = null;
 
-// var p = function () {
-//     if (w <= 100) {
-//         percent.style.width = w++ + '%';
-//         console.log(w);
-//     } else {
-//         clearInterval(intervalId);
-//     }
-// }
-// setInterval(p, 10);
-// window.onload = function () {
-//     document.getElementById('test').style.display = 'none';
-// }
+/*--------------------------------------------- 
+            preload animation
+----------------------------------------------*/
+
+var w = 1;
+var prg = document.getElementById('progress');
+var percent = document.querySelector('#progress .progress__percent span');
+var pgb = document.querySelector('#progress .progress__bar');
+var intervalId = null;
+
+var pg = function () {
+    if (w <= 100) {
+        percent.innerHTML = w + "%";
+        pgb.style.width = w++ + '%';
+    } else {
+        clearInterval(intervalId);
+    }
+}
+setInterval(pg, 20);
+setTimeout(function () {
+    prg.style.display = 'none';
+    document.querySelector('.banner .banner__text-title').classList.add('bounceInLeft');
+    document.querySelector('.banner .banner__text-des').classList.add('bounceInRight');
+    document.querySelector('.banner .banner-img img').classList.add('bounceInUp');
+}, 2500);
+
 
 
 /*--------------------------------------------- 
