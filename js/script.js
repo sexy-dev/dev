@@ -135,5 +135,13 @@ function changeBanner() {
     document.querySelector('.banner-text p').innerHTML = db[curIndex].p;
     document.querySelector('.banner-img img').src = db[curIndex].img;
     document.querySelector('.banner-img').style.backgroundImage = "url(" + db[curIndex].bg + ")";
+}
 
+/* ----------- ~~~~ ----------- */
+
+document.querySelector('.view-more-btn').onclick = function() {
+    swal( {
+        text: 'I will update you soon!',
+        icon: 'warning'
+    })
 }
