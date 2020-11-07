@@ -243,6 +243,8 @@ button:focus {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(var(--bg1)), to(var(--bg2)));
   background: linear-gradient(var(--bg1), var(--bg2));
+  background-image: url(../imgs/particles-bg.png);
+  background-size: cover;
 }
 
 .banner #particles-js {
@@ -1105,7 +1107,7 @@ footer .footer-row2 a {
     display: block;
   }
   .header ul.header-links li {
-    margin-left: 15px;
+    margin-left: 10px !important;
   }
   .header #header__menu {
     display: none;

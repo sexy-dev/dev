@@ -192,6 +192,8 @@ button {
 .banner {
     height: 100vh;
     background: linear-gradient(var(--bg1), var(--bg2));
+    background-image: url(../imgs/particles-bg.png);
+    background-size: cover;
     #particles-js {
         position: absolute;
         width: 100%;
@@ -951,7 +953,7 @@ footer {
         ul.header-links {
             display: block;
             li {
-                margin-left: 15px;
+                margin-left: 10px !important;
             }
         }
         #header__menu {
