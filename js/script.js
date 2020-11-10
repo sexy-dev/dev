@@ -144,5 +144,4 @@ document.querySelector('.view-more-btn').onclick = function() {
         text: 'I will update you soon!',
         icon: 'warning'
     })
-    window.location.href = "test.html";
 }
