@@ -515,14 +515,15 @@ button {
             display: inline-block;
             width: 40%;
             height: 40%;
-            margin: 20px;
+            margin: 1rem;
             border-radius: 20px;
             background-color: red;
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
             box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
-            transition: 1.5s;
+            transition: .5s;
+            transform-style: preserve-3d;
             &:nth-child(1) {
                 top: 10%;
                 left: 0;
@@ -544,19 +545,7 @@ button {
                 background-image: url("../imgs/news-4.png");
             }
             &:hover {
-                transform-style: preserve-3d;
-            }
-            &:first-child:hover {
-                transform: rotateY(180deg);
-            }
-            &:nth-child(2):hover {
-                transform: rotateX(180deg);
-            }
-            &:nth-child(3):hover {
-                transform: rotateX(-180deg);
-            }
-            &:nth-child(4):hover {
-                transform: rotateY(-180deg);
+                transform: scale(1.05);
             }
         }
     }
