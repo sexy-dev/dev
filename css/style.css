@@ -723,6 +723,7 @@ button:focus {
   transition: 0.8s;
   -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 7px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .customers .cus-content > div div {
