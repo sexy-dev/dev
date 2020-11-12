@@ -7,6 +7,7 @@ new WOW().init();
 ----------------------------------------------*/
 
 var w = 1;
+var timeLoad = 2500;
 var prg = document.getElementById('progress');
 var percent = document.querySelector('#progress .progress__percent span');
 var pgb = document.querySelector('#progress .progress__bar');
@@ -25,14 +26,13 @@ var pg = function () {
         clearInterval(intervalId);
     }
 }
-setInterval(pg, 30);
+setInterval(pg, timeLoad/100);
 setTimeout(function () {
     prg.style.display = 'none';
     document.querySelector('.banner .banner__text-title').classList.add('bounceInLeft');
     document.querySelector('.banner .banner__text-des').classList.add('bounceInRight');
     document.querySelector('.banner .banner-img img').classList.add('bounceInUp');
-}, 3100);
-
+}, timeLoad + 100);
 
 
 /*--------------------------------------------- 
@@ -89,7 +89,7 @@ var el = document.querySelectorAll('.banner-text ul li');
 var curIndex = 0;
 for (let e = 0; e < el.length; e++) { // add event to each element (li tag)
     el[e].addEventListener('click', () => {
-        console.log("?")
+        new WOW().init();
         el[curIndex].classList.toggle('selected');
         el[e].classList.toggle('selected');
         curIndex = e;
@@ -101,7 +101,7 @@ for (let e = 0; e < el.length; e++) { // add event to each element (li tag)
 var db = [{
     h2_1: 'Doanh nghiệp',
     h2_2: 'Phần mềm quản lý',
-    p: 'Nếu bạn đang tìm kiếm một đối tác uy tín, tận tâm, nơi bạn có thể đặt trọn niềm tin để phát triển phần mềm chuyên nghiệp, chắc chắn chúng tôi là quyết định chính xác nhất của bạn. Hợp tác và cùng thành công!',
+    p: 'Nếu bạn đang tìm kiếm một đối tác uy tín, tận tâm, nơi bạn có thể đặt trọn niềm tin để phát triển phần mềm chuyên nghiệp, chắc chắn chúng tôi là quyết định chính xác nhất của bạn!',
     img: 'imgs/banner1.png',
     bg: 'imgs/banner1_1.png'
 },
